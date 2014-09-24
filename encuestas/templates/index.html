@@ -1,0 +1,13 @@
+{% if ultimas_encuestas_lista %}
+	<ul>
+		{% for pregunta in ultimas_encuestas_lista %}
+			<li>
+				<a href="/encuestas/{{ pregunta.id }}/">
+					{{ pregunta.pregunta_texto}}
+				</a>
+			</li>			
+		{% endfor %}
+</ul>
+{% else %}
+	<p>No hay elecciones posibles.</p>
+{% endif %}
